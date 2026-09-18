@@ -7,7 +7,7 @@ def cetak_laporan_akhir(hasil_analisis):
         return
 
     print("\n" + "=" * 65)
-    print("               LAPORAN REKAPITULASI PENERIMAAN PABRIK            ")
+    print("               LAPORAN REKAPITULASI PENERIMAAN PABRIK GARAM            ")
     print("=" * 65)
     print(f"{'Petani':<15} | {'Berat (kg)':<10} | {'Kadar Air':<10} | {'Grade':<12} | {'Total (Rp)':<12}")
     print("-" * 65)
