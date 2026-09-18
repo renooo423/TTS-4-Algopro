@@ -1,0 +1,33 @@
+# analisis_mutu.py
+# Dikerjakan oleh: Anggota B
+
+def klasifikasi_dan_harga(data_panen):
+    hasil_analisis = []
+    
+    for item in data_panen:
+        kadar = item["kadar_air"]
+        berat = item["berat"]
+        
+        # Penentuan Grade agroindustri (contoh standar kadar air kopi/biji-bijian)
+        if kadar <= 12.0:
+            grade = "Grade A (Super)"
+            harga_per_kg = 25000
+        elif 12.0 < kadar <= 15.0:
+            grade = "Grade B (Standar)"
+            harga_per_kg = 20000
+        else:
+            grade = "Grade C (Kadar Air Tinggi/Perlu Pengeringan)"
+            harga_per_kg = 14000
+            
+        total_pembayaran = berat * harga_per_kg
+        
+        hasil_analisis.append({
+            "petani": item["petani"],
+            "berat": berat,
+            "kadar_air": kadar,
+            "grade": grade,
+            "harga_per_kg": harga_per_kg,
+            "total_bayar": total_pembayaran
+        })
+        
+    return hasil_analisis
