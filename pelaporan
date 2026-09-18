@@ -6,12 +6,12 @@ def cetak_laporan_akhir(hasil_analisis):
         return
 
     print("\n" + "=" * 65)
-    print("               LAPORAN REKAPITULASI PENERIMAAN PABRIK GULA             ")
+    print("               LAPORAN REKAPITULASI PENERIMAAN PABRIK GARAM            ")
     print("=" * 65)
     print(f"{'Petani Sawah':<15} | {'Berat (kg)':<10} | {'Kadar Air':<10} | {'Grade':<12} | {'Total (Rp)':<12}")
     print("-" * 65)
     
-    total_bobot = 0
+    total_berat = 0
     total_biaya = 0
     
     for row in hasil_analisis:
@@ -21,5 +21,5 @@ def cetak_laporan_akhir(hasil_analisis):
         
     print("-" * 65)
     print(f"Total Muatan Masuk  : {total_bobot:,.1f} kg")
-    print(f"Total Estimasi Biaya: Rp{total_biaya:,.0f}")
+    print(f"Total Perkiraan Biaya: Rp{total_biaya:,.0f}")
     print("=" * 65 + "\n")
