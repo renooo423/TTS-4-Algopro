@@ -1,5 +1,4 @@
 # laporan.py
-# Dikerjakan oleh: Anggota C
 
 def cetak_laporan_akhir(hasil_analisis):
     if not hasil_analisis:
@@ -9,7 +8,7 @@ def cetak_laporan_akhir(hasil_analisis):
     print("\n" + "=" * 65)
     print("               LAPORAN REKAPITULASI PENERIMAAN PABRIK GARAM            ")
     print("=" * 65)
-    print(f"{'Petani':<15} | {'Berat (kg)':<10} | {'Kadar Air':<10} | {'Grade':<12} | {'Total (Rp)':<12}")
+    print(f"{'Petani Sawah':<15} | {'Berat (kg)':<10} | {'Kadar Air':<10} | {'Grade':<12} | {'Total (Rp)':<12}")
     print("-" * 65)
     
     total_berat = 0
