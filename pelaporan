@@ -1,0 +1,26 @@
+# laporan.py
+# Dikerjakan oleh: Anggota C
+
+def cetak_laporan_akhir(hasil_analisis):
+    if not hasil_analisis:
+        print("Tidak ada data untuk ditampilkan.")
+        return
+
+    print("\n" + "=" * 65)
+    print("               LAPORAN REKAPITULASI PENERIMAAN PABRIK            ")
+    print("=" * 65)
+    print(f"{'Petani':<15} | {'Berat (kg)':<10} | {'Kadar Air':<10} | {'Grade':<12} | {'Total (Rp)':<12}")
+    print("-" * 65)
+    
+    total_bobot = 0
+    total_biaya = 0
+    
+    for row in hasil_analisis:
+        total_bobot += row["berat"]
+        total_biaya += row["total_bayar"]
+        print(f"{row['petani']:<15} | {row['berat']:<10.1f} | {row['kadar_air']:<9.1f}% | {row['grade']:<12} | Rp{row['total_bayar']:<10,.0f}")
+        
+    print("-" * 65)
+    print(f"Total Muatan Masuk  : {total_bobot:,.1f} kg")
+    print(f"Total Estimasi Biaya: Rp{total_biaya:,.0f}")
+    print("=" * 65 + "\n")
